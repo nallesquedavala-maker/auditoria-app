@@ -1326,7 +1326,7 @@ function Pricing() {
                   </div>
                   <div style={{ fontSize: 9, color: T.smoke, marginTop: 6 }}>Sin renovación · Sin suscripción</div>
                 </div>
-                <<button
+                <button
                  cl.assName="btn-gold"
                  style={{ width: "100%", fontSize: 11, marginBottom: 14 }}
                  onClick={async () => {
@@ -1338,7 +1338,7 @@ function Pricing() {
 
                  if (data.url) {
                  window.location.href = data.url;
-                 } else {
+                } else {
                  alert("No se pudo iniciar el pago. Intenta de nuevo.");
                   }
                  }}
