@@ -1327,7 +1327,7 @@ function Pricing() {
                   <div style={{ fontSize: 9, color: T.smoke, marginTop: 6 }}>Sin renovación · Sin suscripción</div>
                 </div>
                 <button
-                 cl.assName="btn-gold"
+                 className="btn-gold"
                  style={{ width: "100%", fontSize: 11, marginBottom: 14 }}
                  onClick={async () => {
                  const response = await fetch("/api/create-checkout-session", {
@@ -1343,7 +1343,6 @@ function Pricing() {
                   }
                  }}
                   >
-              
                   ACTIVAR MI BLINDAJE AHORA
                 </button>
                 <div style={{ fontSize: 8, color: T.smoke, textAlign: "center", lineHeight: 1.9, letterSpacing: .5 }}>
