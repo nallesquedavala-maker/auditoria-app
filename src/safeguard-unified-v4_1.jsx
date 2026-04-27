@@ -1326,7 +1326,24 @@ function Pricing() {
                   </div>
                   <div style={{ fontSize: 9, color: T.smoke, marginTop: 6 }}>Sin renovación · Sin suscripción</div>
                 </div>
-                <button className="btn-gold" style={{ width: "100%", fontSize: 11, marginBottom: 14 }}>
+                <<button
+                 cl.assName="btn-gold"
+                 style={{ width: "100%", fontSize: 11, marginBottom: 14 }}
+                 onClick={async () => {
+                 const response = await fetch("/api/create-checkout-session", {
+                  method: "POST",
+                 });
+
+                 const data = await response.json();
+
+                 if (data.url) {
+                 window.location.href = data.url;
+                 } else {
+                 alert("No se pudo iniciar el pago. Intenta de nuevo.");
+                  }
+                 }}
+                  >
+              
                   ACTIVAR MI BLINDAJE AHORA
                 </button>
                 <div style={{ fontSize: 8, color: T.smoke, textAlign: "center", lineHeight: 1.9, letterSpacing: .5 }}>
